@@ -10,6 +10,7 @@ namespace Test01
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Choco Chocola");
         }
     }
 }
