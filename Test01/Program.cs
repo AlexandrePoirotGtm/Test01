@@ -11,6 +11,9 @@ namespace Test01
         static void Main(string[] args)
         {
             Console.WriteLine("Choco Chocola");
+            String j = "";
+            j = Console.ReadLine();
+            Console.WriteLine(j);
         }
     }
 }
