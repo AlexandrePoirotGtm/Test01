@@ -12,8 +12,8 @@ namespace Test01
         static void Main(string[] args)
         {
         Accueil:
-           DateTime date = DateTime.Now;
-           Console.WriteLine("Bienvenue!!!\nNous somme le : "+ date +"\n--1 Addition\n--2 Chose que tu aimes");
+           //DateTime date = DateTime.Now;
+           Console.WriteLine("Bienvenue!!!\nNous somme le : "+ DateTime.Now +"\n--1 Addition\n--2 Chose que tu aimes\n--3 Liste de tes choses favorites");
             string option = "d";
             option = Console.ReadLine();
             if (option == "1")
@@ -59,6 +59,25 @@ namespace Test01
                     {
                      Console.WriteLine("Tu n'est même pas capable de lire correctement, ton âme n'aurais aucun goût");
                     }
+            }
+            else if(option == "3")
+            {
+                Console.WriteLine("Combien de choses préféres veut tu rentrer?");
+                int nb = 0,nbr = 0;
+                nbr = int.Parse(Console.ReadLine());
+                string[] Choses = new string[nbr];
+                while (nb != nbr)
+                {
+                    Console.WriteLine("Quel est ta chose préférer?");
+                    Choses[nb]=Console.ReadLine();
+                    nb++;
+                };
+                nb = 0;
+                while(nb != nbr)
+                {
+                    Console.WriteLine("Ta chose préférer est : " + Choses[nb]);
+                    nb++;
+                };
             }
             else
             {
