@@ -120,7 +120,8 @@ namespace Test01
                 }
                 else
                 {
-                    Console.WriteLine("Bonjour " + Personne[0] + " " + Personne[1] + ".\nTu n'est pas encore né");
+                    Console.WriteLine($"Bonjour {Personne[0]} {Personne[1]}.\nTu n'est pas encore né.");
+                    //Console.WriteLine("Bonjour " + Personne[0] + " " + Personne[1] + ".\nTu n'est pas encore né");
                 }
             }
             else
