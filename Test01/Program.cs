@@ -11,7 +11,9 @@ namespace Test01
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Bienvenue!!!\n--1 Addition\n--2 Chose que tu aimes");
+        Accueil:
+           DateTime date = DateTime.Now;
+           Console.WriteLine("Bienvenue!!!\nNous somme le : "+ date +"\n--1 Addition\n--2 Chose que tu aimes");
             string option = "d";
             option = Console.ReadLine();
             if (option == "1")
@@ -60,7 +62,13 @@ namespace Test01
             }
             else
             {
-                Console.WriteLine("L'option n'est pas encore intégrée");
+                Console.WriteLine("L'option n'est pas encore intégrée\nVeux tu retourner à l'accueil? Y ou N");
+                string c = "";
+                c = Console.ReadLine();
+                if (c == "Y" | c == "y")
+                {
+                    goto Accueil;
+                }
             }
 
             int additionBis(int a, int b)
