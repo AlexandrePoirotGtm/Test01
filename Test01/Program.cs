@@ -107,7 +107,7 @@ namespace Test01
                 Personne.Add(PoserQuestion("Quel est ton prenom?"));
                 Personne.Add(PoserQuestion("Quel est ton nom?"));
                 Personne.Add(PoserQuestion("Quel est ton âge?"));
-                
+
                 /*Console.WriteLine("Quel est ton prenom?");
                 Personne.Add(Console.ReadLine());
                 Console.WriteLine("Quel est ton nom?");
@@ -126,6 +126,14 @@ namespace Test01
                 {
                     Console.WriteLine($"Bonjour {Personne[0]} {Personne[1]}.\nTu n'est pas encore né.");
                 }
+            }
+            else if (option == "42")
+            {
+                Console.WriteLine("La Réponse!!!");
+            }
+            else if (option == "69")
+            {
+                Console.WriteLine("Pervert ( ͡° ͜ʖ ͡°)");
             }
             else
             {
