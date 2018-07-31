@@ -25,6 +25,7 @@ namespace Test01
             {
                 e++;
                 Console.WriteLine(e + " " + j);
+                Console.ReadLine();
             };
 
             Console.WriteLine("Veux tu vendre ton âme pour " + c + " " + j +" ? \nY ou N");
