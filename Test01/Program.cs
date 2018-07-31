@@ -14,7 +14,7 @@ namespace Test01
         {
         Accueil:
            //DateTime date = DateTime.Now;
-           Console.WriteLine("Bienvenue!!!\nNous somme le : "+ DateTime.Now +"\n--1 Addition\n--2 Chose que tu aimes\n--3 Liste de tes choses favorites\n--4 list");
+           Console.WriteLine("Bienvenue!!!\nNous somme le : "+ DateTime.Now +"\n--1 Addition\n--2 Chose que tu aimes\n--3 Liste de tes choses favorites\n--4 list\n--5 présente toi");
             string option = "d";
             option = Console.ReadLine();
             if (option == "1")
@@ -25,8 +25,8 @@ namespace Test01
                 calB = int.Parse(Console.ReadLine());
                 Console.WriteLine(calA + " + " + calB + " = " + additionBis(calA, calB));
             }
-            else if(option == "2")
-            { 
+            else if (option == "2")
+            {
                 String j = "";
                 Console.WriteLine("Qu'est ce que tu aimes?");
                 j = Console.ReadLine();
@@ -39,52 +39,52 @@ namespace Test01
                 int d = int.Parse(c);
                 int e = 0;
                 while (e != d)
-                    {
+                {
                     Console.WriteLine("Appuie sur n'importe quelle touche pour augmenter le nombre de " + j + "\n");
                     e++;
                     Console.ReadKey();
                     Console.WriteLine(e + " " + j + "\n");
-                    };
+                };
 
                 Console.WriteLine("Veux tu vendre ton âme pour " + c + " " + j + " ? \nY ou N");
                 c = Console.ReadLine();
                 if (c == "Y" | c == "y")
-                    {
-                     Console.WriteLine("Merci pour ton âme...dors bien pour ta dernière nuit");
-                    }
+                {
+                    Console.WriteLine("Merci pour ton âme...dors bien pour ta dernière nuit");
+                }
                 else if (c == "N" | c == "n")
-                    {
-                     Console.WriteLine("Tant pis, une prochaine fois peut-être...");
-                    }
+                {
+                    Console.WriteLine("Tant pis, une prochaine fois peut-être...");
+                }
                 else
-                    {
-                     Console.WriteLine("Tu n'est même pas capable de lire correctement, ton âme n'aurais aucun goût");
-                    }
+                {
+                    Console.WriteLine("Tu n'est même pas capable de lire correctement, ton âme n'aurais aucun goût");
+                }
             }
-            else if(option == "3")
+            else if (option == "3")
             {
                 Console.WriteLine("Combien de choses préféres veut tu rentrer?");
-                int nb = 0,nbr = 0;
+                int nb = 0, nbr = 0;
                 nbr = int.Parse(Console.ReadLine());
                 string[] Choses = new string[nbr];
                 while (nb != nbr)
                 {
                     Console.WriteLine("Quel est ta chose préférer?");
-                    Choses[nb]=Console.ReadLine();
+                    Choses[nb] = Console.ReadLine();
                     nb++;
                 };
                 nb = 0;
-                while(nb != nbr)
+                while (nb != nbr)
                 {
                     Console.WriteLine("Ta chose préférer est : " + Choses[nb]);
                     nb++;
                 };
             }
-            else if(option == "4")
+            else if (option == "4")
             {
                 //ArrayList prenoms = new ArrayList();
                 List<string> prenoms = new List<string>();
-                  Console.WriteLine("Quel son tes prenoms préférés?");
+                Console.WriteLine("Quel son tes prenoms préférés?");
                 int c = 0;
                 Console.WriteLine("\nRentre ton nom préféré:");
                 prenoms.Add(Console.ReadLine());
@@ -100,6 +100,28 @@ namespace Test01
                         c++;
                 }
                 Console.WriteLine("\nTon 2eme nom préférer est : " + prenoms[1]);
+            }
+            else if (option == "5")
+            {
+                List<string> Personne = new List<string>();
+                Console.WriteLine("Quel est ton prenom?");
+                Personne.Add(Console.ReadLine());
+                Console.WriteLine("Quel est ton nom?");
+                Personne.Add(Console.ReadLine());
+                Console.WriteLine("Quel est ton age?");
+                Personne.Add(Console.ReadLine());
+                if (int.Parse(Personne[2]) > 1)
+                    { 
+                Console.WriteLine("Bonjour " + Personne[0] + " " + Personne[1] + ".\nTu as " + Personne[2] + " ans.");
+                    }
+                else if(int.Parse(Personne[2]) == 1 | int.Parse(Personne[2]) == 0)
+                {
+                    Console.WriteLine("Bonjour " + Personne[0] + " " + Personne[1] + ".\nTu as " + Personne[2] + " an.");
+                }
+                else
+                {
+                    Console.WriteLine("Bonjour " + Personne[0] + " " + Personne[1] + ".\nTu n'est pas encore né");
+                }
             }
             else
             {
