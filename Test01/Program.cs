@@ -18,14 +18,14 @@ namespace Test01
             Console.WriteLine("Et combien en veux tu?");
             string c = "";
             c = Console.ReadLine();
-            Console.WriteLine("Tu veux " + c + " " + j);
+            Console.WriteLine("Tu veux " + c + " " + j +".");
             int d = int.Parse(c);
             int e = 0;
             while(e != d)
             {
                 e++;
                 Console.WriteLine(e + " " + j);
-                Console.ReadLine();
+                Console.ReadKey();
             };
 
             Console.WriteLine("Veux tu vendre ton âme pour " + c + " " + j +" ? \nY ou N");
