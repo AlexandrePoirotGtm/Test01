@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace Test01
 {
@@ -79,6 +80,15 @@ namespace Test01
                     nb++;
                 };
             }
+            else if(option == "4")
+            {
+                ArrayList prenoms = new ArrayList();
+               
+                  Console.WriteLine("Quel est ta chose préférer?");
+                prenoms.Add(Console.ReadLine());
+                    Console.WriteLine("Ta chose préférer est : " + prenoms[0]);
+            
+            }
             else
             {
                 Console.WriteLine("L'option n'est pas encore intégrée\nVeux tu retourner à l'accueil? Y ou N");
@@ -89,7 +99,6 @@ namespace Test01
                     goto Accueil;
                 }
             }
-
             int additionBis(int a, int b)
             {
                 int cc = 0;
