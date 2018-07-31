@@ -82,8 +82,8 @@ namespace Test01
             }
             else if(option == "4")
             {
-                ArrayList prenoms = new ArrayList();
-               
+                //ArrayList prenoms = new ArrayList();
+                List<string> prenoms = new List<string>();
                   Console.WriteLine("Quel son tes prenoms préférés?");
                 int c = 0;
                 Console.WriteLine("\nRentre ton nom préféré:");
@@ -99,9 +99,7 @@ namespace Test01
                     else
                         c++;
                 }
-               
-                    Console.WriteLine("\nTon 2eme nom préférer est : " + prenoms[1]);
-            
+                Console.WriteLine("\nTon 2eme nom préférer est : " + prenoms[1]);
             }
             else
             {
