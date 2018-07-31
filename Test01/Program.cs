@@ -13,8 +13,8 @@ namespace Test01
         static void Main(string[] args)
         {
         Accueil:
-           //DateTime date = DateTime.Now;
-           Console.WriteLine("Bienvenue!!!\nNous somme le : "+ DateTime.Now +"\n--1 Addition\n--2 Chose que tu aimes\n--3 Liste de tes choses favorites\n--4 list\n--5 présente toi\n--6 Calcule de le prix TTC");
+            //DateTime date = DateTime.Now;
+            Console.WriteLine("Bienvenue!!!\nNous somme le : " + DateTime.Now + "\n--1 Addition\n--2 Chose que tu aimes\n--3 Liste de tes choses favorites\n--4 list\n--5 présente toi\n--6 Calcule de le prix TTC");
             string option = "d";
             option = Console.ReadLine();
             if (option == "1")
@@ -131,28 +131,39 @@ namespace Test01
             {
                 double prixBrut = 0;
                 string c = "Y";
-                
-                while(c == "Y" | c == "y")
+
+                while (c == "Y" | c == "y")
                 {
                     prixBrut = double.Parse(PoserQuestion("Donner le prix brut"));
                     Console.WriteLine("le prix net est de : " + CalculerPrixNet(prixBrut) + " Euros");
                     c = PoserQuestion("Est-ce que tu veut calculer un autre prix TTC avec la TVA 20.6%\nY or N");
                 };
-                
+
             }
             else if (option == "42")
             {
                 int i = 1;
                 while (i < 10)
-                    {
+                {
                     Console.WriteLine("La Réponse!!!\a");
                     Console.ReadLine();
                     i++;
-                    }
+                }
             }
             else if (option == "69")
             {
                 Console.WriteLine("Pervert ( ͡° ͜ʖ ͡°)");
+            }
+            else if (option == "666")
+            {
+                int i = 0;
+                while (i < 333)
+                {
+                    Console.WriteLine("VIVE SATAN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                    Console.WriteLine("VIVE TEEMO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                    i++;
+                }
+
             }
             else
             {
@@ -165,7 +176,6 @@ namespace Test01
                     goto Accueil;
                 }
             }
-            
         }
         static int AdditionBis(int a, int b)
         {
