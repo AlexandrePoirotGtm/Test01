@@ -10,10 +10,15 @@ namespace Test01
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Choco Chocola");
             String j = "";
+            Console.WriteLine("Qu'est ce que tu aimes?");
             j = Console.ReadLine();
-            Console.WriteLine(j);
+            Console.WriteLine("Tu aime " + j);
+
+            Console.WriteLine("Et combien en veux tu?");
+            string c = "";
+            c = Console.ReadLine();
+            Console.WriteLine("Tu veux " + c + " " + j);
         }
     }
 }
