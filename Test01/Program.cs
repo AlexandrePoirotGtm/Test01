@@ -14,7 +14,7 @@ namespace Test01
         {
         Accueil:
            //DateTime date = DateTime.Now;
-           Console.WriteLine("Bienvenue!!!\nNous somme le : "+ DateTime.Now +"\n--1 Addition\n--2 Chose que tu aimes\n--3 Liste de tes choses favorites");
+           Console.WriteLine("Bienvenue!!!\nNous somme le : "+ DateTime.Now +"\n--1 Addition\n--2 Chose que tu aimes\n--3 Liste de tes choses favorites\n--4 list");
             string option = "d";
             option = Console.ReadLine();
             if (option == "1")
@@ -84,9 +84,23 @@ namespace Test01
             {
                 ArrayList prenoms = new ArrayList();
                
-                  Console.WriteLine("Quel est ta chose préférer?");
+                  Console.WriteLine("Quel son tes prenoms préférés?");
+                int c = 0;
+                Console.WriteLine("\nRentre ton nom préféré:");
                 prenoms.Add(Console.ReadLine());
-                    Console.WriteLine("Ta chose préférer est : " + prenoms[0]);
+                while (c == 0)
+                {
+                    Console.WriteLine("\nRentre ton nom préféré:");
+                    prenoms.Add(Console.ReadLine());
+                    Console.WriteLine("\nVoulez vous rentrez un autre nom? Y ou N?");
+                    string cc = Console.ReadLine();
+                    if (cc == "Y" | cc == "y")
+                    { }
+                    else
+                        c++;
+                }
+               
+                    Console.WriteLine("\nTon 2eme nom préférer est : " + prenoms[1]);
             
             }
             else
