@@ -104,12 +104,16 @@ namespace Test01
             else if (option == "5")
             {
                 List<string> Personne = new List<string>();
-                Console.WriteLine("Quel est ton prenom?");
+                Personne.Add(PoserQuestion("Quel est ton prenom?"));
+                Personne.Add(PoserQuestion("Quel est ton nom?"));
+                Personne.Add(PoserQuestion("Quel est ton âge?"));
+                
+                /*Console.WriteLine("Quel est ton prenom?");
                 Personne.Add(Console.ReadLine());
                 Console.WriteLine("Quel est ton nom?");
                 Personne.Add(Console.ReadLine());
                 Console.WriteLine("Quel est ton age?");
-                Personne.Add(Console.ReadLine());
+                Personne.Add(Console.ReadLine());*/
                 if (int.Parse(Personne[2]) > 1)
                 {
                     Console.WriteLine("Bonjour " + Personne[0] + " " + Personne[1] + ".\nTu as " + Personne[2] + " ans.");
@@ -130,6 +134,7 @@ namespace Test01
                 c = Console.ReadLine();
                 if (c == "Y" | c == "y")
                 {
+                    Console.Clear();
                     goto Accueil;
                 }
             }
@@ -138,6 +143,12 @@ namespace Test01
                 int cc = 0;
                 cc = a + b;
                 return (cc);
+            }
+            string PoserQuestion(string Question)
+            {
+                Console.WriteLine(Question);
+                string saisie = Console.ReadLine();
+                return saisie;
             }
         }
     }
