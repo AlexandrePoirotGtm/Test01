@@ -19,6 +19,28 @@ namespace Test01
             string c = "";
             c = Console.ReadLine();
             Console.WriteLine("Tu veux " + c + " " + j);
+            int d = int.Parse(c);
+            int e = 0;
+            while(e != d)
+            {
+                e++;
+                Console.WriteLine(e + " " + j);
+            };
+
+            Console.WriteLine("Veux tu vendre ton âme pour " + c + " " + j +" ? \nY ou N");
+            c = Console.ReadLine();
+            if(c == "Y" | c == "y")
+            {
+                Console.WriteLine("Merci pour ton âme...dors bien pour ta dernière nuit");
+            }
+            else if(c == "N" | c == "n")
+            {
+                Console.WriteLine("Tant pis, une prochaine fois peut-être...");
+            }
+            else
+            {
+                Console.WriteLine("Tu n'est même pas capable de lire correctement, ton âme n'aurais aucun goût");
+            }
         }
     }
 }
