@@ -23,7 +23,7 @@ namespace Test01
                 int calA, calB;
                 calA = int.Parse(Console.ReadLine());
                 calB = int.Parse(Console.ReadLine());
-                Console.WriteLine(calA + " + " + calB + " = " + additionBis(calA, calB));
+                Console.WriteLine(calA + " + " + calB + " = " + AdditionBis(calA, calB));
             }
             else if (option == "2")
             {
@@ -111,17 +111,16 @@ namespace Test01
                 Console.WriteLine("Quel est ton age?");
                 Personne.Add(Console.ReadLine());
                 if (int.Parse(Personne[2]) > 1)
-                    { 
-                Console.WriteLine("Bonjour " + Personne[0] + " " + Personne[1] + ".\nTu as " + Personne[2] + " ans.");
-                    }
-                else if(int.Parse(Personne[2]) == 1 | int.Parse(Personne[2]) == 0)
                 {
-                    Console.WriteLine("Bonjour " + Personne[0] + " " + Personne[1] + ".\nTu as " + Personne[2] + " an.");
+                    Console.WriteLine("Bonjour " + Personne[0] + " " + Personne[1] + ".\nTu as " + Personne[2] + " ans.");
+                }
+                else if (int.Parse(Personne[2]) == 1 | int.Parse(Personne[2]) == 0)
+                {
+                    Console.WriteLine("Bonjour {0} {1}.\nTu as {2} an.", Personne[0], Personne[1], Personne[2]);
                 }
                 else
                 {
                     Console.WriteLine($"Bonjour {Personne[0]} {Personne[1]}.\nTu n'est pas encore né.");
-                    //Console.WriteLine("Bonjour " + Personne[0] + " " + Personne[1] + ".\nTu n'est pas encore né");
                 }
             }
             else
@@ -134,14 +133,10 @@ namespace Test01
                     goto Accueil;
                 }
             }
-            int additionBis(int a, int b)
+            int AdditionBis(int a, int b)
             {
                 int cc = 0;
-                int ab = 0;
-                int bb = 0;
-                ab = a;
-                bb = b;
-                cc = ab + bb;
+                cc = a + b;
                 return (cc);
             }
         }
