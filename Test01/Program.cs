@@ -142,7 +142,13 @@ namespace Test01
             }
             else if (option == "42")
             {
-                Console.WriteLine("La Réponse!!!");
+                int i = 1;
+                while (i < 10)
+                    {
+                    Console.WriteLine("La Réponse!!!\a");
+                    Console.ReadLine();
+                    i++;
+                    }
             }
             else if (option == "69")
             {
