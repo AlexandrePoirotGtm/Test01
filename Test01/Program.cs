@@ -14,7 +14,7 @@ namespace Test01
         {
         Accueil:
            //DateTime date = DateTime.Now;
-           Console.WriteLine("Bienvenue!!!\nNous somme le : "+ DateTime.Now +"\n--1 Addition\n--2 Chose que tu aimes\n--3 Liste de tes choses favorites\n--4 list\n--5 présente toi");
+           Console.WriteLine("Bienvenue!!!\nNous somme le : "+ DateTime.Now +"\n--1 Addition\n--2 Chose que tu aimes\n--3 Liste de tes choses favorites\n--4 list\n--5 présente toi\n--6 Calcule de le prix TTC");
             string option = "d";
             option = Console.ReadLine();
             if (option == "1")
@@ -127,6 +127,19 @@ namespace Test01
                     Console.WriteLine($"Bonjour {Personne[0]} {Personne[1]}.\nTu n'est pas encore né.");
                 }
             }
+            else if (option == "6")
+            {
+                double prixBrut = 0;
+                string c = "Y";
+                
+                while(c == "Y" | c == "y")
+                {
+                    prixBrut = double.Parse(PoserQuestion("Donner le prix brut"));
+                    Console.WriteLine("le prix net est de : " + CalculerPrixNet(prixBrut) + " Euros");
+                    c = PoserQuestion("Est-ce que tu veut calculer un autre prix TTC avec la TVA 20.6%\nY or N");
+                };
+                
+            }
             else if (option == "42")
             {
                 Console.WriteLine("La Réponse!!!");
@@ -146,18 +159,25 @@ namespace Test01
                     goto Accueil;
                 }
             }
-            int AdditionBis(int a, int b)
-            {
-                int cc = 0;
-                cc = a + b;
-                return (cc);
-            }
-            string PoserQuestion(string Question)
-            {
-                Console.WriteLine(Question);
-                string saisie = Console.ReadLine();
-                return saisie;
-            }
+            
+        }
+        static int AdditionBis(int a, int b)
+        {
+            int cc = 0;
+            cc = a + b;
+            return (cc);
+        }
+        static string PoserQuestion(string Question)
+        {
+            Console.WriteLine(Question);
+            string saisie = Console.ReadLine();
+            return saisie;
+        }
+        static double CalculerPrixNet(double prixBrut)
+        {
+            double prixNet = 0;
+            prixNet = prixBrut + (prixBrut / 100 * 20.6);
+            return prixNet;
         }
     }
 }
