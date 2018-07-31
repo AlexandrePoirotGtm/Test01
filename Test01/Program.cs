@@ -14,7 +14,7 @@ namespace Test01
         {
         Accueil:
             //DateTime date = DateTime.Now;
-            Console.WriteLine("Bienvenue!!!\nNous somme le : " + DateTime.Now + "\n--1 Addition\n--2 Chose que tu aimes\n--3 Liste de tes choses favorites\n--4 list\n--5 présente toi\n--6 Calcule de le prix TTC");
+            Console.WriteLine("Bienvenue!!!\nNous somme le : " + DateTime.Now + "\n--1 Addition\n--2 Chose que tu aimes\n--3 Liste de tes choses favorites\n--4 list\n--5 présente toi\n--6 Calcule de le prix TTC\n--7 Taper un nombre");
             string option = "d";
             option = Console.ReadLine();
             if (option == "1")
@@ -140,6 +140,10 @@ namespace Test01
                 };
 
             }
+            else if (option == "7")
+            {
+                Console.WriteLine((SaisirEntier(PoserQuestion("Taper un nombre"))));
+            }
             else if (option == "42")
             {
                 int i = 1;
@@ -194,6 +198,10 @@ namespace Test01
             double prixNet = 0;
             prixNet = prixBrut + (prixBrut / 100 * 20.6);
             return prixNet;
+        }
+        static int SaisirEntier(string entier)
+        {
+            return (int.Parse(entier));
         }
     }
 }
