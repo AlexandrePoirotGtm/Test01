@@ -202,6 +202,15 @@ namespace Test01
                 }
 
             }
+            else if (option == "11")
+            {
+                Console.WriteLine("Auriez-vous l'aimabilité de bien vouloir tapez 2018");
+                AnnéeWhile();
+                }
+            else if (option == "12")
+            {
+                AnnéeDoWhile();
+            }
             else if (option == "42")
             {
                 int i = 1;
@@ -260,6 +269,25 @@ namespace Test01
         static int SaisirEntier(string entier)
         {
             return (int.Parse(entier));
+        }
+        static void AnnéeWhile()
+        {
+            while (Console.ReadLine() != "2018")
+            Console.WriteLine("met 2018 petit galopin");
+                Console.WriteLine("tu vois c'était facile");
+        }
+        static void AnnéeDoWhile()
+        {
+            int i = 0;
+            do
+            {
+                i++;
+                if (i < 10)
+                    Console.WriteLine("met 2018 petit galopin");
+                else
+                    Console.WriteLine("Tu commence a faire *****");
+            }while(Console.ReadLine() != "2018");
+            Console.WriteLine("tu vois c'était facile");
         }
     }
 }
