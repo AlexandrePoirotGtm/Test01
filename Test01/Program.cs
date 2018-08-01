@@ -17,7 +17,7 @@ namespace Test01
             //DateTime date = DateTime.Now;
             Console.WriteLine("Bienvenue!!!\nNous somme le : " + DateTime.Now + "\n--1 Addition\n--2 Chose que tu aimes" +
                 "\n--3 Liste de tes choses favorites\n--4 list\n--5 présente toi\n--6 Calcule de le prix TTC\n--7 Taper un nombre" +
-                "\n--8 Positif ou Négatif\n--9 Devise");
+                "\n--8 Positif ou Négatif\n--9 Devise\n--10 Nombre pair");
             string option = "d";
             option = Console.ReadLine();
             if (option == "1")
@@ -191,6 +191,16 @@ namespace Test01
                         Console.WriteLine("Devise inconnue");
                         break;
                 }
+            }
+            else if (option == "10")
+            {
+                Console.Clear();
+                for (int i = 1; i <= 20; i++)
+                {
+                    if (i % 2 == 0)
+                        Console.WriteLine(i);
+                }
+
             }
             else if (option == "42")
             {
