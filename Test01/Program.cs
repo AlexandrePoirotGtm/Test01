@@ -12,11 +12,12 @@ namespace Test01
 
         static void Main(string[] args)
         {
-        Accueil:
+            Accueil:
+            Console.InputEncoding = System.Text.Encoding.Unicode;
             //DateTime date = DateTime.Now;
             Console.WriteLine("Bienvenue!!!\nNous somme le : " + DateTime.Now + "\n--1 Addition\n--2 Chose que tu aimes" +
                 "\n--3 Liste de tes choses favorites\n--4 list\n--5 présente toi\n--6 Calcule de le prix TTC\n--7 Taper un nombre" +
-                "\n--8 Positif ou Négatif");
+                "\n--8 Positif ou Négatif\n--9 Devise");
             string option = "d";
             option = Console.ReadLine();
             if (option == "1")
@@ -163,6 +164,33 @@ namespace Test01
                     d = PoserQuestion("Est-ce que tu veut vérifier un autre nombre?\nY or N");
                 };
                 
+            }
+            else if (option == "9")
+            {
+                string g = "George";
+                g = PoserQuestion("rentrez une device");
+                switch (g)
+                {
+                    case "George":
+                        Console.WriteLine("Le meilleur nom!!!");
+                        break;
+
+                    case "$":
+                        Console.WriteLine("Dollar");
+                        break;
+
+                    case "€":
+                        Console.WriteLine("Euro");
+                        break;
+
+                    case "£":
+                        Console.WriteLine("Livre");
+                        break;
+                    
+                    default:
+                        Console.WriteLine("Devise inconnue");
+                        break;
+                }
             }
             else if (option == "42")
             {
