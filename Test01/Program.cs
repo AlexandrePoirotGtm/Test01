@@ -14,7 +14,9 @@ namespace Test01
         {
         Accueil:
             //DateTime date = DateTime.Now;
-            Console.WriteLine("Bienvenue!!!\nNous somme le : " + DateTime.Now + "\n--1 Addition\n--2 Chose que tu aimes\n--3 Liste de tes choses favorites\n--4 list\n--5 présente toi\n--6 Calcule de le prix TTC\n--7 Taper un nombre");
+            Console.WriteLine("Bienvenue!!!\nNous somme le : " + DateTime.Now + "\n--1 Addition\n--2 Chose que tu aimes" +
+                "\n--3 Liste de tes choses favorites\n--4 list\n--5 présente toi\n--6 Calcule de le prix TTC\n--7 Taper un nombre" +
+                "\n--8 Positif ou Négatif");
             string option = "d";
             option = Console.ReadLine();
             if (option == "1")
@@ -48,11 +50,11 @@ namespace Test01
 
                 Console.WriteLine("Veux tu vendre ton âme pour " + c + " " + j + " ? \nY ou N");
                 c = Console.ReadLine();
-                if (c == "Y" | c == "y")
+                if (c == "Y" || c == "y")
                 {
                     Console.WriteLine("Merci pour ton âme...dors bien pour ta dernière nuit");
                 }
-                else if (c == "N" | c == "n")
+                else if (c == "N" || c == "n")
                 {
                     Console.WriteLine("Tant pis, une prochaine fois peut-être...");
                 }
@@ -94,7 +96,7 @@ namespace Test01
                     prenoms.Add(Console.ReadLine());
                     Console.WriteLine("\nVoulez vous rentrez un autre nom? Y ou N?");
                     string cc = Console.ReadLine();
-                    if (cc == "Y" | cc == "y")
+                    if (cc == "Y" || cc == "y")
                     { }
                     else
                         c++;
@@ -132,7 +134,7 @@ namespace Test01
                 double prixBrut = 0;
                 string c = "Y";
 
-                while (c == "Y" | c == "y")
+                while (c == "Y" || c == "y")
                 {
                     prixBrut = double.Parse(PoserQuestion("Donner le prix brut"));
                     Console.WriteLine("le prix net est de : " + CalculerPrixNet(prixBrut) + " Euros");
@@ -143,6 +145,24 @@ namespace Test01
             else if (option == "7")
             {
                 Console.WriteLine((SaisirEntier(PoserQuestion("Taper un nombre"))));
+            }
+            else if (option == "8")
+            {
+                int c = 0;
+                string d = "Y";
+
+                while (d == "Y" || d == "y")
+                {
+                    c = SaisirEntier(PoserQuestion("Rentrez un entier"));
+                    if (c > 0)
+                        Console.WriteLine($"{c} est positif");
+                    else if (c < 0)
+                        Console.WriteLine($"{c} est négatif");
+                    else
+                        Console.WriteLine("Rien à dire");
+                    d = PoserQuestion("Est-ce que tu veut vérifier un autre nombre?\nY or N");
+                };
+                
             }
             else if (option == "42")
             {
